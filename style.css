@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  font-family: 'Encode Sans', sans-serif;
+}
+
+.game_title {
+  font-size: 2rem;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.current_player {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.game_container {
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_row {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_content {
+  transition: transform 0.5s;
+}
+
+
