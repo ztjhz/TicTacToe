@@ -13,25 +13,24 @@
     <title>Tic Tac Toe</title>
   </head>
   <body>
-    <header class="game_title">Tic Tac Toe</header>
-    <div class="current_player">Current Player: X</div>
-    <div class="game_container">
-      <div class="game_row">
-        <div class="game_cell"></div>
-        <div class="game_cell"></div>
-        <div class="game_cell"></div>
+    <div class="game">
+      <header class="game_title">Tic Tac Toe</header>
+      <div class="current_player">Current Player: O</div>
+      <div class="game_container"></div>
+      <div class="score_board">
+        <div class="score_title">Score:</div>
+        <div class="o_wrapper">
+          <div class="score_label">O</div>
+          <div class="o_score"></div>
+        </div>
+        <div class="x_wrapper">
+          <div class="score_label">X</div>
+          <div class="x_score"></div>
+        </div>
       </div>
-      <div class="game_row">
-        <div class="game_cell"></div>
-        <div class="game_cell"></div>
-        <div class="game_cell"></div>
-      </div>
-      <div class="game_row">
-        <div class="game_cell"></div>
-        <div class="game_cell"></div>
-        <div class="game_cell"></div>
-      </div>
+      <div class="game_message_container"></div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>

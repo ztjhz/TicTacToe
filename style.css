@@ -1,20 +1,40 @@
+:root {
+  --bg-color: #f4f6f7;
+  --main-color: #4b685f;
+  --text-color: #cbc4c0;
+  --color-o: #03b28b;
+  --border-o: #03b28cb2;
+  --color-x: #ff5346;
+  --border-x: #ff52469c;
+}
+
 * {
   margin: 0;
   font-family: 'Encode Sans', sans-serif;
 }
 
+body {
+  background-color: var(--bg-color);
+}
+
+.game {
+  position: relative;
+}
+
 .game_title {
-  font-size: 2rem;
+  font-size: 3rem;
   text-decoration: underline;
   text-align: center;
   font-weight: 700;
   margin: 1rem 0;
+  color: var(--main-color);
 }
 
 .current_player {
   font-size: 1rem;
   text-align: center;
   margin-bottom: 1rem;
+  color: var(--main-color);
 }
 
 .game_container {
@@ -36,14 +56,110 @@
 .game_cell {
   width: 100px;
   height: 100px;
-  border: 2px solid #141414;
+  border: 2px solid var(--border-o);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1px;
+  cursor: pointer;
 }
 
-.game_content {
-  transition: transform 0.5s;
+.game_cell:hover {
+  font-size: 4rem;
 }
 
+.game_cell.filled {
+  font-size: 4rem;
+  cursor: default;
+  animation: animate 200ms 1;
+  transition: font-size 200ms ease-in-out;
+}
 
+@keyframes animate {
+  0% {
+    font-size: 1px;
+  }
+  60% {
+    font-size: 6rem;
+  }
+  100% {
+    font-size: 4rem;
+  }
+}
+
+.score_board {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score_title {
+  font-size: 3rem;
+  text-decoration: underline;
+  font-weight: 700;
+  color: var(--main-color);
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.o_wrapper,
+.x_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.score_label {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.o_wrapper {
+  color: var(--color-o);
+}
+
+.x_wrapper {
+  color: var(--color-x);
+}
+
+.x_score,
+.o_score {
+  font-size: 1.5rem;
+  padding: 5px;
+  opacity: 0.8;
+}
+
+.game_message_container {
+  z-index: 10;
+  position: absolute;
+  transform: translate(-200px, -100px);
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+  display: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background: var(--border-o);
+  opacity: 1;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 320px) {
+  .game_message_container {
+    position: absolute;
+    top: 50%;
+    min-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
