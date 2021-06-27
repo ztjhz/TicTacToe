@@ -100,7 +100,7 @@ class Game {
             console.log(`${winner} won!`);
             if (winner === 'O') {
               this.player.oPlayer.score += 1;
-            } else {
+            } else if (winner === 'X') {
               this.player.xPlayer.score += 1;
             }
             this.renderScore();
