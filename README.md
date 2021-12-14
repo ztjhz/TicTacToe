@@ -6,8 +6,7 @@
 
 ## [Live Website](https://ztjhz.github.io/TicTacToe/)
 
-<img src="tictactoe.gif" alt="demo gif" width="400"/>
-
+<a href="https://ztjhz.github.io/TicTacToe/" target="_blank" alt="demo site"><img src="tictactoe.gif" alt="demo gif" width="400"/></a>
 
 ## Implementation:
 - JavaScript
